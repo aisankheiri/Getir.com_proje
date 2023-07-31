@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: large;
+  font-style: normal;
+}
+.navbar-links-container {
+  height: 50px;
+  background-color: #4c3398;
+  padding-top: 0.2rem;
+  padding-left: 6px;
+}
+.nav-link {
+  color: #dcdcff;
+  height: 100%;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: #4c3398;
+  font-weight: 550;
+  font-style: bold;
+}
+.nav-link:hover {
+  background-color: #5d3ebc;
+  cursor: pointer;
+}
+.nav-link-getir-text {
+  color: #ffd300;
+}
+.nav-second {
+  background-color: #5d3ebc;
+  height: 66px;
+  padding-left: 16px;
+  display: flex;
+}
+.name-surname-container {
+  margin: 8px;
+  margin-top: 25px;
+  padding-left: 24px;
+  padding-bottom: 25px;
+  display: flex;
+  border-bottom: solid #f5f2f2;
+}
+.name-surname-text {
+  padding-left: 13px;
+  display: block;
+  padding-right: 1rem;
+}
+.name-surname-number {
+  color: #a6a6ae;
+  margin-left: 0.7rem;
+  font-size: 0.7rem;
+}
+.account-icon {
+  border: solid #e9e9ee;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(188, 184, 184);
+}
+.menu-option-icon {
+  color: #dcdcff;
+  margin-top: 1rem;
+  font-size: x-large;
+}
+.account:hover {
+  background-color: red;
+}
+.delete-icon {
+  margin-left: 12rem;
+  background-color: #eaeaee;
+  cursor: pointer;
+}
+.search-icon {
+  color: #d9d9dc;
+  margin-top: 1rem;
+  margin-left: 85%;
+  
+  
+  
+}
+
