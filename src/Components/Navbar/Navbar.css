@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   font-size: large;
   font-style: normal;
 }
@@ -13,7 +13,7 @@
 }
 .nav-link {
   color: #dcdcff;
-  height: 100%;
+  min-height: 100%;
   align-items: center;
   border: none;
   border-radius: 8px;
@@ -77,8 +77,10 @@
   color: #d9d9dc;
   margin-top: 1rem;
   margin-left: 85%;
-  
-  
-  
 }
-
+@media (max-width: 567px) {
+  .nav-link {
+    font-size: small;
+    padding-right: 0.5rem;
+  }
+}

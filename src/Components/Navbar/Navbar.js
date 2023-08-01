@@ -23,8 +23,11 @@ import LogoutTwoToneIcon from "@mui/icons-material/LogoutTwoTone";
 import ClearTwoToneIcon from "@mui/icons-material/ClearTwoTone";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
 
+import { useMediaQuery } from "@mui/material";
+
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const isSmallScreen = useMediaQuery("(max-width:768px)");
 
   const menuOptions = [
     {
@@ -86,6 +89,9 @@ const Navbar = () => {
         <Link to="/yemek" style={{ textDecoration: "none" }}>
           <button className="nav-link">getiryemek</button>
         </Link>
+        <Link to="/buyuk" style={{ textDecoration: "none" }}>
+          <button className="nav-link">getirbüyük</button>
+        </Link>
         <Link to="/su" style={{ textDecoration: "none" }}>
           <button className="nav-link">getirsu</button>
         </Link>
@@ -95,12 +101,17 @@ const Navbar = () => {
       </div>
 
       <div className="nav-second">
-        <div>
-          <HiOutlineBars3
-            className="menu-option-icon"
-            onClick={() => setOpenMenu(true)}
-          />
-        </div>
+
+        {isSmallScreen && (
+          <div>
+            <HiOutlineBars3
+              className="menu-option-icon"
+              onClick={() => setOpenMenu(true)}
+            />
+          </div>
+        )}
+
+
         <SearchTwoToneIcon className="search-icon" />
 
 

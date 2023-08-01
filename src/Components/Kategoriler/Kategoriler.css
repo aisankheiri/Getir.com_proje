@@ -1,0 +1,29 @@
+.category {
+  margin: 15px;
+}
+.category-text {
+  font-family: "Comic Neue", cursive;
+  font-family: "Open Sans", sans-serif;
+  color: #676767;
+  font-size: 14px;
+  font-style: bold;
+  font-weight: 600;
+}
+.category-header {
+  margin-bottom: 15px;
+}
+.category-btn {
+  display: flex;
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 5px;
+  width: 35%;
+}
+.category-btn:hover {
+  background-color: #f3f0fe;
+}
+.category-btn img {
+  height: 30px;
+  border: solid 1px rgb(190, 190, 190);
+  margin-right: 0.5rem;
+}
