@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: large;
   font-style: normal;
 }
@@ -76,11 +76,45 @@
 .search-icon {
   color: #d9d9dc;
   margin-top: 1rem;
-  margin-left: 85%;
+  margin-left: auto;
+  margin-bottom: 7px;
+}
+.nav-second {
+  padding-right: 1rem;
+  align-items: center;
+  text-align: center;
+  
+
+}
+
+.nav-second-text {
+  color: #ffd300;
+  
+  margin-left: 1rem;
+  font-size: x-large;
+  font-weight: 700;
+  
+}
+
+@media (max-width: 768px) {
+  .nav-second-text {
+    color: #ffd300;
+    margin-left: 33%;
+    
+    
+  }
 }
 @media (max-width: 567px) {
   .nav-link {
     font-size: small;
     padding-right: 0.5rem;
+  }
+  .nav-second-text {
+    color: #ffd300;
+  }
+  .search-icon {
+    color: #d9d9dc;
+    margin-top: 1rem;
+    margin-left: auto;
   }
 }

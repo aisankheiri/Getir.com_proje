@@ -4,13 +4,15 @@
 .category-text {
   font-family: "Comic Neue", cursive;
   font-family: "Open Sans", sans-serif;
-  color: #676767;
+  color: #343335;
   font-size: 14px;
   font-style: bold;
   font-weight: 600;
+  
 }
 .category-header {
   margin-bottom: 15px;
+  color: #343335;
 }
 .category-btn {
   display: flex;
@@ -26,4 +28,5 @@
   height: 30px;
   border: solid 1px rgb(190, 190, 190);
   margin-right: 0.5rem;
+  border-radius: 2px;
 }

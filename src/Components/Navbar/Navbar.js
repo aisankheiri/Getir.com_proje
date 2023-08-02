@@ -28,6 +28,7 @@ import { useMediaQuery } from "@mui/material";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const isSmallScreen = useMediaQuery("(max-width:768px)");
+  const [selectedButton, setSelectedButton] = useState("");
 
   const menuOptions = [
     {
@@ -83,25 +84,24 @@ const Navbar = () => {
   return (
     <nav>
       <div className="navbar-links-container">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <button className="nav-link nav-link-getir-text">getir</button>
+        <Link to="/" style={{ textDecoration: "none" }} >
+          <button className="nav-link nav-link-getir-text" onClick={() => setSelectedButton("getir")}> getir</button>
         </Link>
-        <Link to="/yemek" style={{ textDecoration: "none" }}>
-          <button className="nav-link">getiryemek</button>
+        <Link to="/yemek" style={{ textDecoration: "none" }} >
+          <button className="nav-link" onClick={() => setSelectedButton("getirYemek")}>getiryemek</button>
         </Link>
         <Link to="/buyuk" style={{ textDecoration: "none" }}>
-          <button className="nav-link">getirbüyük</button>
+          <button className="nav-link" onClick={() => setSelectedButton("getirbüyük")}>getirbüyük</button>
         </Link>
         <Link to="/su" style={{ textDecoration: "none" }}>
-          <button className="nav-link">getirsu</button>
+          <button className="nav-link" onClick={() => setSelectedButton("getirsu")}>getirsu</button>
         </Link>
         <Link to="/carsi" style={{ textDecoration: "none" }}>
-          <button className="nav-link">getirçarşı</button>
+          <button className="nav-link" onClick={() => setSelectedButton("getirçarşı")}>getirçarşı</button>
         </Link>
       </div>
 
       <div className="nav-second">
-
         {isSmallScreen && (
           <div>
             <HiOutlineBars3
@@ -110,7 +110,8 @@ const Navbar = () => {
             />
           </div>
         )}
-
+         <div className="nav-second-text">{selectedButton}</div>
+        
 
         <SearchTwoToneIcon className="search-icon" />
 
