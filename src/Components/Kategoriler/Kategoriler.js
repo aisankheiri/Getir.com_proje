@@ -25,71 +25,86 @@ import img19 from "./pics/19.png";
 
 const Kategoriler = () => {
   return (
-    <div className='category'>
-      <div className='category-items'>
-        <h1 className='category-header'>kategoriler</h1>
+    <div className='row'>
+      <div className='column left'>
+        <div className='category'>
+          <div className='category-items'>
+            <h1 className='category-header'>kategoriler</h1>
 
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img1}/>Yaza Özel</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img2}/>İndirimler</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img3}/>Su & içecek</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img4}/>Meyve & Sebze</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img5}/>Fırından</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img6}/>Temel Gıda</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img7}/>Atıştırmalık</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img8}/>Dondurma</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img9}/>Süt Ürünleri</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img10}/>Kahvaltılık</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img11}/>Yiyecek</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img12}/>Fit & Form</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img13}/>Kişisel Bakım</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img14}/>Ev Bakım</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img15}/>Ev & Yaşam</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img16}/>Teknoloji</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img17}/>Evcil Hayvan</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img18}/>Bebek</button>
-        </Link>
-        <Link to="/aaaa" style={{ textDecoration: "none" }}>
-          <button className='category-btn category-text'><img src={img19}/>Cinsel Sağlık</button>
-        </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img1} />Yaza Özel</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img2} />İndirimler</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img3} />Su & içecek</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img4} />Meyve & Sebze</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img5} />Fırından</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img6} />Temel Gıda</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img7} />Atıştırmalık</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img8} />Dondurma</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img9} />Süt Ürünleri</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img10} />Kahvaltılık</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img11} />Yiyecek</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img12} />Fit & Form</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img13} />Kişisel Bakım</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img14} />Ev Bakım</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img15} />Ev & Yaşam</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img16} />Teknoloji</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img17} />Evcil Hayvan</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img18} />Bebek</button>
+            </Link>
+            <Link to="/aaaa" style={{ textDecoration: "none" }}>
+              <button className='category-btn category-text'><img src={img19} />Cinsel Sağlık</button>
+            </Link>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div className='column middle'>
+        <h1 className='product-text'>Yazaozel</h1>
+       
+      </div>
+
+      <div className='column right'>
+        <h1 className='cart-text'>Sepetim</h1>
+        <div className='cart'></div>
 
 
       </div>
-
 
     </div>
   )

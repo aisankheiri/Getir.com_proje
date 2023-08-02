@@ -95,6 +95,9 @@
   font-weight: 700;
   
 }
+.active {
+  background-color:#49bc3e;
+}
 
 @media (max-width: 768px) {
   .nav-second-text {

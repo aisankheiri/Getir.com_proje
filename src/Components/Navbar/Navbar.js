@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
+
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -84,20 +85,46 @@ const Navbar = () => {
   return (
     <nav>
       <div className="navbar-links-container">
-        <Link to="/" style={{ textDecoration: "none" }} >
-          <button className="nav-link nav-link-getir-text" onClick={() => setSelectedButton("getir")}> getir</button>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <button
+            className="nav-link nav-link-getir-text"
+            onClick={() => setSelectedButton("getir")}
+          >
+            {" "}
+            getir
+          </button>
         </Link>
-        <Link to="/yemek" style={{ textDecoration: "none" }} >
-          <button className="nav-link" onClick={() => setSelectedButton("getirYemek")}>getiryemek</button>
+        <Link to="/yemek" style={{ textDecoration: "none" }}>
+          <button
+            className="nav-link"
+            onClick={() => setSelectedButton("getirYemek")}
+          >
+            getiryemek
+          </button>
         </Link>
         <Link to="/buyuk" style={{ textDecoration: "none" }}>
-          <button className="nav-link" onClick={() => setSelectedButton("getirbüyük")}>getirbüyük</button>
+          <button
+            className="nav-link"
+            onClick={() => setSelectedButton("getirbüyük")}
+          >
+            getirbüyük
+          </button>
         </Link>
         <Link to="/su" style={{ textDecoration: "none" }}>
-          <button className="nav-link" onClick={() => setSelectedButton("getirsu")}>getirsu</button>
+          <button
+            className="nav-link"
+            onClick={() => setSelectedButton("getirsu")}
+          >
+            getirsu
+          </button>
         </Link>
         <Link to="/carsi" style={{ textDecoration: "none" }}>
-          <button className="nav-link" onClick={() => setSelectedButton("getirçarşı")}>getirçarşı</button>
+          <button
+            className="nav-link"
+            onClick={() => setSelectedButton("getirçarşı")}
+          >
+            getirçarşı
+          </button>
         </Link>
       </div>
 
@@ -110,11 +137,9 @@ const Navbar = () => {
             />
           </div>
         )}
-         <div className="nav-second-text">{selectedButton}</div>
-        
+        <div className="nav-second-text">{selectedButton}</div>
 
         <SearchTwoToneIcon className="search-icon" />
-
 
         <Drawer
           open={openMenu}
@@ -155,6 +180,7 @@ const Navbar = () => {
         </Drawer>
       </div>
     </nav>
+    
   );
 };
 
