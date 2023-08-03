@@ -4,12 +4,12 @@ import Slider from "../../Components/Slider/Slider";
 import Kategoriler from "../../Components/Kategoriler/Kategoriler";
 
 
-const Getir = () => {
+const Getir = ({cartItems, setCartItems}) => {
   return (
     <div>
       <Navbar />
       <Slider />
-      <Kategoriler/>
+      <Kategoriler cartItems={cartItems} setCartItems={setCartItems}/>
       
     </div>
   );

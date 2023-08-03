@@ -24,10 +24,34 @@ import sepetimg from "./pics/sepet-img.svg";
 
 import getirdata from "../../Back/Getir/getirdata";
 import ProductItem from "../Products/ProductItem";
+import alertify from "alertifyjs";
 
 
-const Kategoriler = () => {
+const Kategoriler = ({cartItems, setCartItems}) => {
   const { productItems } = getirdata;
+
+  const totalPrice = cartItems.reduce(
+    (price, item) => price + item.quantity * item.price,
+    0
+  );
+
+  const handleAddToCart = (product) => {
+    const ProductExist = cartItems.find((item) => item.id === product.id);
+    if (ProductExist) {
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === product.id
+            ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
+            : item
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+    }
+    alertify.success(`${product.name} 1 arttırıldı.`, 4);
+    //saniye belirlemek ,4
+  };
+  
 
   return (
     <div className='row'>
@@ -107,6 +131,8 @@ const Kategoriler = () => {
           {productItems.map((productItems) => (
             <ProductItem
               productItems={productItems}
+              cartItems={cartItems} 
+              setCartItems={setCartItems}
             />
           ))}
 
