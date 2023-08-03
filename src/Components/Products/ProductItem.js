@@ -3,12 +3,13 @@ import "./ProductItem.css";
 
 const ProductItem = ({productItems}) => {
   return (
-    <div className="work-section-info" >
-    <div className="info-boxes-img-container">
+    <div className="product-category" >
+    <div className="product-boxes-img-container">
       <img className="product-image" src={productItems.image} alt={productItems.name} />
     </div>
-    <h2>{productItems.name}</h2>
-    <p>{productItems.price}   TL</p>
+    <h2 className='product-price'>₺ {productItems.price}</h2>
+    <h3 className='product-name'>{productItems.name}</h3>
+   
   </div>
   )
 }

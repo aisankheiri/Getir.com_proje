@@ -21,9 +21,13 @@ import img17 from "./pics/17.png";
 import img18 from "./pics/18.png";
 import img19 from "./pics/19.png";
 
+import getirdata from "../../Back/Getir/getirdata";
+import ProductItem from "../Products/ProductItem";
 
 
 const Kategoriler = () => {
+  const { productItems } = getirdata;
+
   return (
     <div className='row'>
       <div className='column left'>
@@ -95,8 +99,22 @@ const Kategoriler = () => {
       </div>
 
       <div className='column middle'>
-        <h1 className='product-text'>Yazaozel</h1>
-       
+        <h1 className='product-text'>Yaza Özel</h1>
+
+        <div className="Products-container">
+
+          {productItems.map((productItems) => (
+            <ProductItem
+              productItems={productItems}
+            />
+          ))}
+
+
+        </div>
+
+
+
+
       </div>
 
       <div className='column right'>
