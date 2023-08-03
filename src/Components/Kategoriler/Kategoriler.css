@@ -64,7 +64,7 @@
 .cart {
   margin-top: 0.7rem;
   margin-right: 1rem;
-  height: 11rem;
+  height: 15rem;
   border: 2px solid #ffd300;
   border-radius: 8px;
   background-color: rgb(255, 255, 255);
@@ -82,3 +82,27 @@
   flex-wrap: wrap;
   padding-left: 12px;
 }
+.cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+.cart h4{
+  color:#5D3EBC;
+  margin-bottom: 1rem;
+  font-weight: 1000;
+  font-style: bold;
+}
+.cart p{
+  color: #727C8F;
+  font-size: medium;
+  font-weight: 600;
+  
+}
+.cart-img{
+  margin-bottom: 1rem;
+}
+

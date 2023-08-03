@@ -20,6 +20,7 @@ import img16 from "./pics/16.png";
 import img17 from "./pics/17.png";
 import img18 from "./pics/18.png";
 import img19 from "./pics/19.png";
+import sepetimg from "./pics/sepet-img.svg";
 
 import getirdata from "../../Back/Getir/getirdata";
 import ProductItem from "../Products/ProductItem";
@@ -119,7 +120,12 @@ const Kategoriler = () => {
 
       <div className='column right'>
         <h1 className='cart-text'>Sepetim</h1>
-        <div className='cart'></div>
+        
+        <div className='cart'>
+        <img src={sepetimg} className='cart-img'></img>
+        <h4>Sepetiniz şu an boş</h4>
+        <p>Sipariş vermek için sepetinize ürün ekleyin</p>
+        </div>
 
 
       </div>
