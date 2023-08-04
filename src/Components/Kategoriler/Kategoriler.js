@@ -25,9 +25,10 @@ import sepetimg from "./pics/sepet-img.svg";
 import getirdata from "../../Back/Getir/getirdata";
 import ProductItem from "../Products/ProductItem";
 import alertify from "alertifyjs";
+import CartItem from "../Cart/CartItem";
 
 
-const Kategoriler = ({cartItems, setCartItems}) => {
+const Kategoriler = ({ cartItems, setCartItems }) => {
   const { productItems } = getirdata;
 
   const totalPrice = cartItems.reduce(
@@ -51,7 +52,7 @@ const Kategoriler = ({cartItems, setCartItems}) => {
     alertify.success(`${product.name} 1 arttırıldı.`, 4);
     //saniye belirlemek ,4
   };
-  
+
 
   return (
     <div className='row'>
@@ -131,7 +132,7 @@ const Kategoriler = ({cartItems, setCartItems}) => {
           {productItems.map((productItems) => (
             <ProductItem
               productItems={productItems}
-              cartItems={cartItems} 
+              cartItems={cartItems}
               setCartItems={setCartItems}
             />
           ))}
@@ -146,15 +147,25 @@ const Kategoriler = ({cartItems, setCartItems}) => {
 
       <div className='column right'>
         <h1 className='cart-text'>Sepetim</h1>
-        
-        <div className='cart'>
-        <img src={sepetimg} className='cart-img'></img>
-        <h4>Sepetiniz şu an boş</h4>
-        <p>Sipariş vermek için sepetinize ürün ekleyin</p>
-        </div>
 
+        {cartItems.length >= 1 && (
+          <div className='cart'>
+            <CartItem
+              cartItems={cartItems}
+              setCartItems={setCartItems} />
+          </div>
+        )}
 
+        {cartItems.length === 0 && (
+          <div className='cart'>
+            <img src={sepetimg} className='cart-img'></img>
+            <h4>Sepetiniz şu an boş</h4>
+            <p>Sipariş vermek için sepetinize ürün ekleyin</p>
+          </div>
+        )}
       </div>
+
+
 
     </div>
   )
