@@ -48,7 +48,11 @@ const CartItem = ({ cartItems, setCartItems }) => {
       <div className="information-of-product-in-cart">
         {cartItems.map((item) => (
           <div key={item.id} className="cart-item-list">
-            <div className="cart-items-name">{item.name}</div>
+            <div className="cart-items-name">
+              {item.name}
+              <div className="item-price">₺{item.price}</div>
+            </div>
+
             <div className="cart-items-function">
               <button
                 className="cart-items-remove"
