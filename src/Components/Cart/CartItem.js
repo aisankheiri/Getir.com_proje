@@ -73,7 +73,7 @@ const CartItem = ({ cartItems, setCartItems }) => {
           <div>
             <button className="add-to-cart-btn-sepetim">Sepete git</button>
           </div>
-          <div className="total-price">₺ {totalPrice}</div>
+          <div className="total-price">₺ {totalPrice.toFixed(2)} </div>
         </div>
       </div>
     </div>
