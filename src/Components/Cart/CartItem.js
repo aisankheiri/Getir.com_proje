@@ -45,7 +45,7 @@ const CartItem = ({ cartItems, setCartItems }) => {
 
   return (
     <div>
-      <div>
+      <div className="information-of-product-in-cart">
         {cartItems.map((item) => (
           <div key={item.id} className="cart-item-list">
             <div className="cart-items-name">{item.name}</div>
@@ -56,10 +56,7 @@ const CartItem = ({ cartItems, setCartItems }) => {
               >
                 <DeleteForeverTwoToneIcon />
               </button>
-              <div className="product-quantity">
-                {item.quantity}
-
-              </div>
+              <div className="product-quantity">{item.quantity}</div>
               <button
                 className="cart-items-add"
                 onClick={() => handleAddToCart(item)}
@@ -70,12 +67,14 @@ const CartItem = ({ cartItems, setCartItems }) => {
           </div>
         ))}
       </div>
+
       <div className="cart-items-total-price-name">
-        {cartItems.length >= 1 && (
-          <div className="cart-items-total-price">
-            Toplam Fiyat ={totalPrice} TL
+        <div className="cart-items-total-price">
+          <div>
+            <button className="add-to-cart-btn-sepetim">Sepete git</button>
           </div>
-        )}
+          <div className="total-price">₺ {totalPrice}</div>
+        </div>
       </div>
     </div>
   );
