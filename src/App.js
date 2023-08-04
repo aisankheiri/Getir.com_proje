@@ -7,6 +7,7 @@ import GetirSu from './Routes/GetirSu/GetirSu';
 import GetirCarsi from './Routes/GetirCarsi/GetirCarsi';
 import GetirBuyuk from './Routes/GetirBuyuk/GetirBuyuk';
 import { useEffect, useState } from 'react';
+import Cart from "./Components/Cart/Cart";
 
 function App() {
   const [cartItems,setCartItems] = useState([]);
@@ -28,6 +29,7 @@ function App() {
           <Route path="/buyuk" element={<GetirBuyuk/>} />
           <Route path="/su" element={<GetirSu/>} />
           <Route path="/carsi" element={<GetirCarsi/>} />
+          <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>}/>
           
         </Routes>
       </Router>

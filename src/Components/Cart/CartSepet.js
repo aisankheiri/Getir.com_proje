@@ -2,9 +2,10 @@ import React from "react";
 import alertify from "alertifyjs";
 import "./CartItem.css";
 import DeleteForeverTwoToneIcon from "@mui/icons-material/DeleteForeverTwoTone";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import "./CartSepet.css";
 
-const CartItem = ({ cartItems, setCartItems }) => {
+const CartSepet = ({ cartItems, setCartItems }) => {
   const totalPrice = cartItems.reduce(
     (price, item) => price + item.quantity * item.price,
     0
@@ -49,9 +50,14 @@ const CartItem = ({ cartItems, setCartItems }) => {
       <div className="information-of-product-in-cart">
         {cartItems.map((item) => (
           <div key={item.id} className="cart-item-list">
-            <div className="cart-items-name">
-              {item.name}
+            <img
+              className="cart-items-image"
+              src={item.image}
+              alt={item.name}
+            />
+            <div className="cart-items-namee">
               <div className="item-price">₺{item.price}</div>
+              {item.name}
             </div>
 
             <div className="cart-items-function">
@@ -61,7 +67,7 @@ const CartItem = ({ cartItems, setCartItems }) => {
               >
                 <DeleteForeverTwoToneIcon />
               </button>
-              <div className="product-quantity">{item.quantity}</div>
+              <div className="cart-product-quantity">{item.quantity}</div>
               <button
                 className="cart-items-add"
                 onClick={() => handleAddToCart(item)}
@@ -75,12 +81,6 @@ const CartItem = ({ cartItems, setCartItems }) => {
 
       <div className="cart-items-total-price-name">
         <div className="cart-items-total-price">
-          <div>
-            <Link to="/cart">
-              <button className="add-to-cart-btn-sepetim">Sepete git</button>
-            </Link>
-
-          </div>
           <div className="total-price">₺ {totalPrice.toFixed(2)} </div>
         </div>
       </div>
@@ -88,4 +88,4 @@ const CartItem = ({ cartItems, setCartItems }) => {
   );
 };
 
-export default CartItem;
+export default CartSepet;

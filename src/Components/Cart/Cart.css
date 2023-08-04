@@ -1,0 +1,18 @@
+.cart-navbar {
+  background-color: #5d3ebc;
+  height: 66px;
+  padding-left: 16px;
+}
+.left-cart {
+  width: 60%;
+  
+
+  padding-left: 4rem;
+  padding-top: 2rem;
+}
+.right-cart {
+  width: 40%;
+  
+  padding-left: 4rem;
+  padding-top: 2rem;
+}

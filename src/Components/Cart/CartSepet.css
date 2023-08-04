@@ -1,0 +1,31 @@
+.cart-items-image {
+  width: 75px;
+  height: auto;
+  padding-right: 10px;
+  border: #ebebeb solid 2px;
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+.cart-product-quantity {
+  text-align: center;
+  color: #ebebeb;
+  background-color: #5d3ebc;
+  border: #ebebeb solid 1px;
+  height: 32px;
+  width: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 5px;
+}
+.cart-items-namee{
+    display: flex;
+    justify-content:left;
+    flex-direction: column;
+    margin-right: 1rem;
+    height: 30px;
+    width: 485px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 900;
+    
+}
