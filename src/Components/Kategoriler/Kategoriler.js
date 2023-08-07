@@ -28,6 +28,7 @@ import alertify from "alertifyjs";
 import CartItem from "../Cart/CartItem";
 
 
+
 const Kategoriler = ({ cartItems, setCartItems }) => {
   const { productItems } = getirdata;
 
@@ -163,6 +164,11 @@ const Kategoriler = ({ cartItems, setCartItems }) => {
             <p>Sipariş vermek için sepetinize ürün ekleyin</p>
           </div>
         )}
+        <div>
+          <h1 className='cart-below'>
+          Geçmiş Siparişlerim
+          </h1>
+        </div>
       </div>
 
 

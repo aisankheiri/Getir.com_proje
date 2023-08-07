@@ -2,7 +2,6 @@ import React from "react";
 import alertify from "alertifyjs";
 import "./CartItem.css";
 import DeleteForeverTwoToneIcon from "@mui/icons-material/DeleteForeverTwoTone";
-import { Link } from "react-router-dom";
 import "./CartSepet.css";
 
 const CartSepet = ({ cartItems, setCartItems }) => {
@@ -77,12 +76,6 @@ const CartSepet = ({ cartItems, setCartItems }) => {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="cart-items-total-price-name">
-        <div className="cart-items-total-price">
-          <div className="total-price">₺ {totalPrice.toFixed(2)} </div>
-        </div>
       </div>
     </div>
   );
