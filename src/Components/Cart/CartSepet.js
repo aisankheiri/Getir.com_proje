@@ -1,15 +1,10 @@
 import React from "react";
 import alertify from "alertifyjs";
 import "./CartItem.css";
-import DeleteForeverTwoToneIcon from "@mui/icons-material/DeleteForeverTwoTone";
 import "./CartSepet.css";
+import { BiTrash } from "react-icons/bi";
 
 const CartSepet = ({ cartItems, setCartItems }) => {
-  const totalPrice = cartItems.reduce(
-    (price, item) => price + item.quantity * item.price,
-    0
-  );
-
   const handleAddToCart = (product) => {
     const ProductExist = cartItems.find((item) => item.id === product.id);
     if (ProductExist) {
@@ -64,7 +59,7 @@ const CartSepet = ({ cartItems, setCartItems }) => {
                 className="cart-items-remove"
                 onClick={() => handleRemoveProduct(item)}
               >
-                <DeleteForeverTwoToneIcon />
+                <BiTrash className="BiTrash-btn" />
               </button>
               <div className="cart-product-quantity">{item.quantity}</div>
               <button

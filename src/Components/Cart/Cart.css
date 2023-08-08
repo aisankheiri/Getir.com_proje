@@ -115,6 +115,7 @@ h5 {
   color: #fafafa;
   border-radius: 8px;
   border: none;
+  margin-top: 1rem;
 }
 .payment-btn:hover {
   background-color: #6949c9;

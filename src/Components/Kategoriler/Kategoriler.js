@@ -21,10 +21,8 @@ import img17 from "./pics/17.png";
 import img18 from "./pics/18.png";
 import img19 from "./pics/19.png";
 import sepetimg from "./pics/sepet-img.svg";
-
 import getirdata from "../../Back/Getir/getirdata";
 import ProductItem from "../Products/ProductItem";
-import alertify from "alertifyjs";
 import CartItem from "../Cart/CartItem";
 
 
@@ -32,27 +30,6 @@ import CartItem from "../Cart/CartItem";
 const Kategoriler = ({ cartItems, setCartItems }) => {
   const { productItems } = getirdata;
 
-  const totalPrice = cartItems.reduce(
-    (price, item) => price + item.quantity * item.price,
-    0
-  );
-
-  const handleAddToCart = (product) => {
-    const ProductExist = cartItems.find((item) => item.id === product.id);
-    if (ProductExist) {
-      setCartItems(
-        cartItems.map((item) =>
-          item.id === product.id
-            ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
-    }
-    alertify.success(`${product.name} 1 arttırıldı.`, 4);
-    //saniye belirlemek ,4
-  };
 
 
   return (
@@ -132,6 +109,7 @@ const Kategoriler = ({ cartItems, setCartItems }) => {
 
           {productItems.map((productItems) => (
             <ProductItem
+              key={productItems.id}
               productItems={productItems}
               cartItems={cartItems}
               setCartItems={setCartItems}
@@ -159,7 +137,7 @@ const Kategoriler = ({ cartItems, setCartItems }) => {
 
         {cartItems.length === 0 && (
           <div className='cart'>
-            <img src={sepetimg} className='cart-img'></img>
+            <img src={sepetimg} className="cart-img"></img>
             <h4>Sepetiniz şu an boş</h4>
             <p>Sipariş vermek için sepetinize ürün ekleyin</p>
           </div>

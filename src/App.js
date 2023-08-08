@@ -9,8 +9,9 @@ import GetirBuyuk from './Routes/GetirBuyuk/GetirBuyuk';
 import { useEffect, useState } from 'react';
 import Cart from "./Components/Cart/Cart";
 
+
 function App() {
-  const [cartItems,setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(()=>{
     const cartItems = localStorage.getItem("cartItems")
@@ -20,19 +21,20 @@ function App() {
   useEffect(()=>{
     localStorage.setItem("cartItems",JSON.stringify(cartItems))
   })
-  
+
   return (
-    <Router>
+    <div className='App'>
+      <Router>
         <Routes>
-          <Route path="/" element={<Getir cartItems={cartItems} setCartItems={setCartItems}/>} />
-          <Route path="/yemek" element={<GetirYemek/>} />
-          <Route path="/buyuk" element={<GetirBuyuk/>} />
-          <Route path="/su" element={<GetirSu/>} />
-          <Route path="/carsi" element={<GetirCarsi/>} />
-          <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems}/>}/>
-          
+          <Route path="/" element={<Getir cartItems={cartItems} setCartItems={setCartItems} />} />
+          <Route path="/yemek" element={<GetirYemek  />} />
+          <Route path="/buyuk" element={<GetirBuyuk />} />
+          <Route path="/su" element={<GetirSu />} />
+          <Route path="/carsi" element={<GetirCarsi />} />
+          <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} />} />
         </Routes>
       </Router>
+    </div>
   );
 }
 

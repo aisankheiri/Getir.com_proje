@@ -13,9 +13,10 @@
   border: #ebebeb solid 1px;
   height: 32px;
   width: 32px;
-  font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   padding-top: 5px;
+  align-items: center;
+  padding-top: 7px;
 }
 .cart-items-namee{
     display: flex;
@@ -30,4 +31,10 @@
 }
 .name{
   margin-top:0.5rem
+}
+.BiTrash-btn{
+  height: 20px;
+  width: 20px;
+  color: #5d3ebc;
+  padding-top: 3px;
 }

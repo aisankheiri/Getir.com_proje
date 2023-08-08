@@ -1,8 +1,8 @@
 import React from "react";
 import alertify from "alertifyjs";
 import "./CartItem.css";
-import DeleteForeverTwoToneIcon from "@mui/icons-material/DeleteForeverTwoTone";
 import { Link } from 'react-router-dom';
+import { BiTrash } from "react-icons/bi";
 
 const CartItem = ({ cartItems, setCartItems }) => {
   const totalPrice = cartItems.reduce(
@@ -59,7 +59,7 @@ const CartItem = ({ cartItems, setCartItems }) => {
                 className="cart-items-remove"
                 onClick={() => handleRemoveProduct(item)}
               >
-                <DeleteForeverTwoToneIcon />
+                <BiTrash className="BiTrash-btn" />
               </button>
               <div className="product-quantity">{item.quantity}</div>
               <button
