@@ -56,7 +56,7 @@ const CartSepet = ({ cartItems, setCartItems }) => {
             />
             <div className="cart-items-namee">
               <div className="item-price">₺{item.price}</div>
-              {item.name}
+              <div className="name">{item.name}</div>
             </div>
 
             <div className="cart-items-function">

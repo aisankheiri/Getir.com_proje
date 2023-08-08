@@ -1,19 +1,23 @@
-.information-of-product-in-cart{
-    padding-top: 1rem;
-    margin-bottom: 10%;
-   
+.information-of-product-in-cart {
+  padding: 1.5rem;
+  background-color: #fdfbfb;
+  border-radius: 8px;
+  
 }
 .cart-item-list {
   display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
   align-items: center;
-  padding-top: 5px;
-  padding-bottom: 25px;
-  border-bottom: solid#efeeee 0.5px;
-
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: solid 0.5px rgb(243, 241, 241);
+  
 }
 .cart-items-name {
   display: flex;
-  justify-content:left;
+  justify-content: left;
   flex-direction: column;
   margin-right: 1rem;
   height: 30px;
@@ -21,7 +25,7 @@
   text-align: left;
   color: #9b9b9b;
   font-size: 15px;
-  font-weight: 900;
+  
 }
 .cart-items-function {
   display: flex;
@@ -51,13 +55,11 @@
   justify-content: center;
   font-size: 18px;
   font-weight: 600;
- 
 }
 .cart-items-total-price {
   display: flex;
   padding-left: 0.5rem;
-  margin-top:10%;
-
+  margin-top: 10%;
 }
 
 .product-quantity {
@@ -69,37 +71,34 @@
   font-weight: 700;
   font-size: 18px;
   padding-top: 5px;
-
 }
-.add-to-cart-btn-sepetim{
-    height: 44px;
-    width: 163px;
-    background-color: #5d3ebc;
-    border-radius: 8px;
-    border-color: inherit;
-    color :#FFFFFF;
-    font-size: small;
-    cursor: pointer;
+.add-to-cart-btn-sepetim {
+  height: 44px;
+  width: 163px;
+  background-color: #5d3ebc;
+  border-radius: 8px;
+  border-color: inherit;
+  color: #ffffff;
+  font-size: small;
+  cursor: pointer;
 }
-.add-to-cart-btn-sepetim:hover{
-    background-color: #7849F7;
+.add-to-cart-btn-sepetim:hover {
+  background-color: #7849f7;
 }
-.total-price{
-    height: 44px;
-    width: 80px;
-    border: solid #5d3ebc 2px;
-    border-radius: 8px;
-    text-align: center;
-    padding-top: 0.6rem;
-    color: #5d3ebc;
-    font-size: small;
- 
+.total-price {
+  height: 44px;
+  width: 80px;
+  border: solid #5d3ebc 2px;
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 0.6rem;
+  color: #5d3ebc;
+  font-size: small;
 }
-.item-price{
-    justify-content: none;
-    color: #5d3ebc;
-    font-size: 13px;
-    
+.item-price {
+  justify-content: none;
+  color: #5d3ebc;
+  font-size: 13px;
 }
 
 @media (max-width: 600px) {

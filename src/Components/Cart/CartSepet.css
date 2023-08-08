@@ -2,7 +2,7 @@
   width: 75px;
   height: auto;
   padding-right: 10px;
-  border: #ebebeb solid 2px;
+  border: #ebebeb solid 1px;
   border-radius: 8px;
   margin-right: 1rem;
 }
@@ -26,6 +26,8 @@
     width: 485px;
     text-align: left;
     font-size: 15px;
-    font-weight: 900;
     
+}
+.name{
+  margin-top:0.5rem
 }

@@ -147,7 +147,7 @@ const Kategoriler = ({ cartItems, setCartItems }) => {
       </div>
 
       <div className='column right'>
-        <h1 className='cart-text'>Sepetim</h1>
+        <h1 className='cart-text-getirsayfa'>Sepetim</h1>
 
         {cartItems.length >= 1 && (
           <div className='cart'>
