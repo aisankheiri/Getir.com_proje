@@ -1,1 +1,91 @@
+.footer-items-container {
+  display: block;
+  margin-top: 8rem;
+}
+.footer-items {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  margin: 0 128px;
+}
+.footer-item1 {
+  margin-right: 12px;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+  color: rgb(82, 82, 82);
+}
+.footer-item2 {
+  display: block;
+  padding: 8px;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+  text-decoration:none;
+  color:#5D3EBC;
+  font-weight: 300;
 
+}
+.footer-icons {
+  padding: 8px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+  color: rgb(105, 116, 136);
+  font-size: 11px;
+  flex: 1 1 0%;
+  display: flex;
+  justify-content: end;
+}
+.icon {
+  color: rgb(105, 116, 136);
+  padding-top: 2px;
+}
+.icon-face {
+  font-size: x-large;
+}
+.icon-face:hover {
+  color: #7849f7;
+  background-color: #f3f0fe;
+  border-radius: 5px;
+}
+.icon-twit {
+  font-size: x-large;
+  margin-left: 1.5rem;
+}
+.icon-twit:hover {
+  color: #7849f7;
+  background-color: #f3f0fe;
+  border-radius: 5px;
+}
+.icon-insta {
+  font-size: x-large;
+  margin-left: 1.5rem;
+}
+.icon-insta:hover {
+  color: #7849f7;
+  background-color: #f3f0fe;
+  border-radius: 5px;
+}
+.icon-language {
+  font-size: x-large;
+  padding-right: 5px;
+}
+.change-language-btn {
+  margin-left: 1.5rem;
+  border: 0.3px rgb(231, 229, 229) solid;
+  border-radius: 8px;
+  width: 120px;
+  height: auto;
+  background-color: #f6f6f6;
+  cursor: pointer;
+  color: rgb(105, 116, 136);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.change-language-btn:hover {
+  color: #5d3ebc;
+  background-color: #f3f0fe;
+}

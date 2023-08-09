@@ -14,12 +14,11 @@
 .left-cart {
   width: 60%;
 
-  padding-left: 4rem;
+  padding-left: 100px;
   padding-top: 2rem;
 }
 .right-cart {
   width: 40%;
-
   padding-left: 4rem;
   padding-top: 2rem;
 }
@@ -67,6 +66,7 @@ h5 {
 }
 .adress-header {
   margin-bottom: 1rem;
+  padding-top: 4px;
 }
 .IoLocationOutline {
   height: 25px;
@@ -126,3 +126,4 @@ h5 {
 .basket {
   background-color: #f6f6f6;
 }
+

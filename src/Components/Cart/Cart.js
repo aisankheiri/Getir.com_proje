@@ -4,6 +4,7 @@ import CartSepet from "./CartSepet";
 import Dialog from "../../Dialog";
 import { BiTrash } from "react-icons/bi";
 import { IoLocationOutline } from "react-icons/io5";
+import Footer from "../Footer/Footer";
 
 
 const Cart = ({ cartItems, setCartItems }) => {
@@ -78,8 +79,10 @@ const Cart = ({ cartItems, setCartItems }) => {
             </div>
           </div>
         </div>
+        <Footer/>
       </div >
       {dialog.isLoading && <Dialog onDialog={areUSureDelete} message={dialog.message} />}
+      
     </div >
 
 
