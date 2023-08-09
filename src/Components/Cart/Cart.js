@@ -1,10 +1,14 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState } from "react";
 import "./Cart.css";
 import CartSepet from "./CartSepet";
 import Dialog from "../../Dialog";
 import { BiTrash } from "react-icons/bi";
 import { IoLocationOutline } from "react-icons/io5";
 import Footer from "../Footer/Footer";
+import getir from "../../Assets/logoPics/getir.svg";
+import { Link } from "react-router-dom";
+import house from "../../Assets/logoPics/House.svg";
+import {FaGreaterThan} from "react-icons/fa";
 
 
 const Cart = ({ cartItems, setCartItems }) => {
@@ -38,13 +42,25 @@ const Cart = ({ cartItems, setCartItems }) => {
   }
   return (
     <div>
-      <div className="cart-navbar"></div>
+      <nav className="cart-navbar">
+        <div className="cart-navbar-container">
+          <div className="cart-navbar-items">
+            <div className="navbar-getir-logo">
+              <Link to="/"><img className="navbar-getir-logo-img" src={getir} alt="getir-svg" /></Link>
+            </div>
+            <div className="navbar-getir-adress">
+              <div className="navbar-adress-back"><div className="navbar-adress-text"><img className="navbar-house-img" src={house} alt="house-svg"/>Ev <FaGreaterThan className="FaGreaterThan-icon"/></div></div>
+              <div className="navbar-adress-time">TVS 8 dk</div>
+            </div>
+          </div>
+        </div>
+      </nav>
       <div className="basket">
         <div className="row">
           <div className="column left-cart">
             <div className="cart-header">
               <h5>Sepetim</h5>
-              <button className="clear-cart" onClick={() => handleCartClearest()}><BiTrash className="BiTrash"/>Sepeti Temizle</button>
+              <button className="clear-cart" onClick={() => handleCartClearest()}><BiTrash className="BiTrash" />Sepeti Temizle</button>
             </div>
             {cartItems.length >= 1 && (
               <div className="cart-sepet-container">
@@ -79,10 +95,10 @@ const Cart = ({ cartItems, setCartItems }) => {
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div >
       {dialog.isLoading && <Dialog onDialog={areUSureDelete} message={dialog.message} />}
-      
+
     </div >
 
 

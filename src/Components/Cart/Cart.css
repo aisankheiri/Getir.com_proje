@@ -9,17 +9,22 @@
 .cart-navbar {
   background-color: #5d3ebc;
   height: 75px;
-  padding-left: 16px;
+  padding-left: 128px;
+  padding-right: 128px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.4rem;
+  
 }
 .left-cart {
-  width: 60%;
+  width: 65%;
 
   padding-left: 100px;
   padding-top: 2rem;
 }
 .right-cart {
-  width: 40%;
-  padding-left: 4rem;
+  width: 35%;
+  padding-left: 2rem;
   padding-top: 2rem;
 }
 .cart-sepet-container {
@@ -85,6 +90,7 @@ h5 {
   display: flex;
   margin-bottom: 1rem;
   padding-left: 0.5rem;
+  height: 4.5rem;
   width: 70%;
   padding: 1rem;
   text-align: center;
@@ -92,6 +98,7 @@ h5 {
   background-color: #fdfbfb;
   justify-content: space-between;
   padding: 16px;
+  align-items: center;
 }
 .cart-total-pricee {
   display: flex;
@@ -125,5 +132,57 @@ h5 {
 }
 .basket {
   background-color: #f6f6f6;
+}
+.cart-navbar-container{
+  display: block;
+}
+.cart-navbar-items{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.navbar-getir-adress{
+  display: flex;
+  justify-content: end;
+  flex: 1 1 0%;
+  
+}
+.navbar-adress-back{
+  background-color: #FFD300;
+}
+.navbar-adress-text{
+  height: 40px;
+  width: 7rem;
+  background-color: #f6f6f6;
+  border-radius: 8px 50px 50px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 5px;
+  
+
+}
+.navbar-adress-time{
+  height: 40px;
+  width: 6rem;
+  background-color: #FFD300;
+  border-radius: 0px 8px 8px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5d3ebc;
+
+  
+}
+.navbar-house-img{
+  height: 14px; 
+  padding-right: 15px;
+}
+.FaGreaterThan-icon{
+  color: #5d3ebc;
+  margin-left: 9px;
+}
+.navbar-getir-logo-img{
+  height: 27px;
 }
 
