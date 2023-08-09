@@ -52,7 +52,7 @@ const CartSepet = ({ cartItems, setCartItems }) => {
         // Son ürün kaldırıldı, ana sayfaya yönlendir
         window.location.href = "/";
       }
-    }, 2000);
+    }, 1000);
   };
 
   const handleLoader = (productId) => {
