@@ -8,7 +8,7 @@ import Footer from "../Footer/Footer";
 import getir from "../../Assets/logoPics/getir.svg";
 import { Link } from "react-router-dom";
 import house from "../../Assets/logoPics/House.svg";
-import {FaGreaterThan} from "react-icons/fa";
+import { FaGreaterThan } from "react-icons/fa";
 
 
 const Cart = ({ cartItems, setCartItems }) => {
@@ -49,7 +49,7 @@ const Cart = ({ cartItems, setCartItems }) => {
               <Link to="/"><img className="navbar-getir-logo-img" src={getir} alt="getir-svg" /></Link>
             </div>
             <div className="navbar-getir-adress">
-              <div className="navbar-adress-back"><div className="navbar-adress-text"><img className="navbar-house-img" src={house} alt="house-svg"/>Ev <FaGreaterThan className="FaGreaterThan-icon"/></div></div>
+              <div className="navbar-adress-back"><div className="navbar-adress-text"><img className="navbar-house-img" src={house} alt="house-svg" />Ev <FaGreaterThan className="FaGreaterThan-icon" /></div></div>
               <div className="navbar-adress-time">TVS 8 dk</div>
             </div>
           </div>
@@ -85,6 +85,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                 </div>
                 <div className="cart-price">
                   ₺ {totalPrice.toFixed(2)}
+                  
                 </div>
               </div>
 
@@ -96,7 +97,10 @@ const Cart = ({ cartItems, setCartItems }) => {
           </div>
         </div>
         <Footer />
+        
+
       </div >
+
       {dialog.isLoading && <Dialog onDialog={areUSureDelete} message={dialog.message} />}
 
     </div >

@@ -1,44 +1,57 @@
-import React from "react";
+import React ,{useState} from "react";
 import alertify from "alertifyjs";
 import "./CartItem.css";
 import "./CartSepet.css";
 import { BiTrash } from "react-icons/bi";
 
 const CartSepet = ({ cartItems, setCartItems }) => {
+  const [loadingProductIds, setLoadingProductIds] = useState([]);
   const handleAddToCart = (product) => {
-    const ProductExist = cartItems.find((item) => item.id === product.id);
-    if (ProductExist) {
-      setCartItems(
-        cartItems.map((item) =>
-          item.id === product.id
-            ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
-    }
-    alertify.success(`${product.name} 1 arttırıldı.`, 4);
-    //saniye belirlemek ,4
+    setLoadingProductIds([...loadingProductIds, product.id]);
+
+    setTimeout(() => {
+      const ProductExist = cartItems.find((item) => item.id === product.id);
+      if (ProductExist) {
+        setCartItems(
+          cartItems.map((item) =>
+            item.id === product.id
+              ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
+              : item
+          )
+        );
+      } else {
+        setCartItems([...cartItems, { ...product, quantity: 1 }]);
+      }
+      alertify.success(`${product.name} 1 arttırıldı.`, 4);
+      setLoadingProductIds(loadingProductIds.filter(id => id !== product.id));
+    }, 1000);
   };
 
   const handleRemoveProduct = (product) => {
-    const productExist = cartItems.find((item) => item.id === product.id);
-    if (productExist.quantity === 1) {
-      setCartItems(cartItems.filter((item) => item.id !== product.id));
-    } else {
-      setCartItems(
-        cartItems.map((item) =>
-          item.id === product.id
-            ? { ...productExist, quantity: productExist.quantity - 1 }
-            : item
-        )
-      );
-    }
-    alertify.success(`${product.name} 1 azaldı.`, 4);
-    //saniye belirlemek ,4
-  };
+    setLoadingProductIds([...loadingProductIds, product.id]);
 
+    setTimeout(() => {
+      const productExist = cartItems.find((item) => item.id === product.id);
+      if (productExist.quantity === 1) {
+        setCartItems(cartItems.filter((item) => item.id !== product.id));
+      } else {
+        setCartItems(
+          cartItems.map((item) =>
+            item.id === product.id
+              ? { ...productExist, quantity: productExist.quantity - 1 }
+              : item
+          )
+        );
+      }
+      alertify.success(`${product.name} 1 azaldı.`, 4);
+      setLoadingProductIds(loadingProductIds.filter(id => id !== product.id));
+    }, 1000);
+  };
+  const handleLoader = (productId) => {
+    if (loadingProductIds.includes(productId)) {
+      return <div className="custom-loader"></div>;
+    }
+  };
   return (
     <div>
       <div className="information-of-product-in-cart">
@@ -59,9 +72,11 @@ const CartSepet = ({ cartItems, setCartItems }) => {
                 className="cart-items-remove"
                 onClick={() => handleRemoveProduct(item)}
               >
-                <BiTrash className="BiTrash-btn" />
+                {item.quantity === 1 && (<BiTrash className="BiTrash-btn" />)}
+                {item.quantity > 1 && (<div>-</div>)}
+
               </button>
-              <div className="cart-product-quantity">{item.quantity}</div>
+              <div className="cart-product-quantity">{handleLoader(item.id) || item.quantity}</div>
               <button
                 className="cart-items-add"
                 onClick={() => handleAddToCart(item)}
