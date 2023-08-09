@@ -108,8 +108,8 @@
 
 /* loading icon when click add or remove buttons */
 .custom-loader {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin-left: 6px;
   display: grid;
   border-radius: 50%;
