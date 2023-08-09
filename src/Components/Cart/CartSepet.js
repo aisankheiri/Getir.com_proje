@@ -1,21 +1,23 @@
-import React ,{useState} from "react";
+import React, { useState } from "react";
 import alertify from "alertifyjs";
 import "./CartItem.css";
 import "./CartSepet.css";
 import { BiTrash } from "react-icons/bi";
 
+
 const CartSepet = ({ cartItems, setCartItems }) => {
   const [loadingProductIds, setLoadingProductIds] = useState([]);
+
   const handleAddToCart = (product) => {
     setLoadingProductIds([...loadingProductIds, product.id]);
 
     setTimeout(() => {
-      const ProductExist = cartItems.find((item) => item.id === product.id);
-      if (ProductExist) {
+      const productExist = cartItems.find((item) => item.id === product.id);
+      if (productExist) {
         setCartItems(
           cartItems.map((item) =>
             item.id === product.id
-              ? { ...ProductExist, quantity: ProductExist.quantity + 1 }
+              ? { ...productExist, quantity: productExist.quantity + 1 }
               : item
           )
         );
@@ -23,7 +25,7 @@ const CartSepet = ({ cartItems, setCartItems }) => {
         setCartItems([...cartItems, { ...product, quantity: 1 }]);
       }
       alertify.success(`${product.name} 1 arttırıldı.`, 4);
-      setLoadingProductIds(loadingProductIds.filter(id => id !== product.id));
+      setLoadingProductIds(loadingProductIds.filter((id) => id !== product.id));
     }, 1000);
   };
 
@@ -44,14 +46,21 @@ const CartSepet = ({ cartItems, setCartItems }) => {
         );
       }
       alertify.success(`${product.name} 1 azaldı.`, 4);
-      setLoadingProductIds(loadingProductIds.filter(id => id !== product.id));
+      setLoadingProductIds(loadingProductIds.filter((id) => id !== product.id));
+
+      if (cartItems.length === 1) {
+        // Son ürün kaldırıldı, ana sayfaya yönlendir
+        window.location.href = "/";
+      }
     }, 1000);
   };
+
   const handleLoader = (productId) => {
     if (loadingProductIds.includes(productId)) {
       return <div className="custom-loader"></div>;
     }
   };
+
   return (
     <div>
       <div className="information-of-product-in-cart">
@@ -72,11 +81,12 @@ const CartSepet = ({ cartItems, setCartItems }) => {
                 className="cart-items-remove"
                 onClick={() => handleRemoveProduct(item)}
               >
-                {item.quantity === 1 && (<BiTrash className="BiTrash-btn" />)}
-                {item.quantity > 1 && (<div>-</div>)}
-
+                {item.quantity === 1 && <BiTrash className="BiTrash-btn" />}
+                {item.quantity > 1 && <div>-</div>}
               </button>
-              <div className="cart-product-quantity">{handleLoader(item.id) || item.quantity}</div>
+              <div className="cart-product-quantity">
+                {handleLoader(item.id) || item.quantity}
+              </div>
               <button
                 className="cart-items-add"
                 onClick={() => handleAddToCart(item)}
