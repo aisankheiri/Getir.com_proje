@@ -165,8 +165,16 @@ const Navbar = () => {
             </div>
             <div className="nav-items-right">
               <button href="" className="nav-item-1" target="_blank" rel="noreferrer noopener"><MdLanguage className="MdLanguage" />Türkçe (TR)</button>
-              <a href="/kampanyalar" className="nav-item-2"><BiSolidGift className="BiSolidGift"/>Kampanyalar</a>
-              <div className="nav-item-3"><CgProfile className="CgProfile"/>Profil</div>
+              <a href="/kampanyalar" className="nav-item-2"><BiSolidGift className="BiSolidGift" />Kampanyalar</a>
+
+              <div class="dropdown">
+                <button className="nav-item-3 dropbtn"><CgProfile className="CgProfile" />Profil</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
             </div>
 
           </div>

@@ -24,7 +24,6 @@
   margin-left: auto;
   margin-right: auto;
   height: 100%;
- 
 }
 navbar-items {
   display: flex;
@@ -32,18 +31,18 @@ navbar-items {
   align-items: center;
   height: 100%;
 }
-.nav-items-right{
+.nav-items-right {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
   color: rgb(255, 255, 255);
   margin-left: auto;
-  justify-content:flex-end;
-  
-margin-top: -2.5rem;
+  justify-content: flex-end;
+
+  margin-top: -2.5rem;
 }
 
-.logo{
+.logo {
   color: rgb(244, 242, 253);
   background-color: var(--color-primary);
   border-radius: 6px 6px 0px 0px;
@@ -51,12 +50,12 @@ margin-top: -2.5rem;
   margin: 10px 0px 3px 3px;
 }
 .selected {
-  background-color:#5D3EBC;
+  background-color: #5d3ebc;
   height: 40px;
   width: auto;
   border-radius: 8px 8px 0px 0px;
 }
-.link{
+.link {
   position: relative;
   outline: 0px;
   font-weight: 600;
@@ -71,8 +70,8 @@ margin-top: -2.5rem;
   border-radius: 8px 8px 0px 0px;
   padding: 0px 15px;
 }
-.link:hover{
-  background-color: #5D3EBC;
+.link:hover {
+  background-color: #5d3ebc;
 }
 .img-size {
   height: 16px;
@@ -83,7 +82,7 @@ margin-top: -2.5rem;
   color: #ffd300;
 }
 .nav-second {
-  background-color: #5D3EBC;
+  background-color: #5d3ebc;
   height: 66px;
   padding-left: 16px;
   display: flex;
@@ -146,16 +145,17 @@ margin-top: -2.5rem;
 .active {
   background-color: #49bc3e;
 }
-.nav-item-1{
-  background-color:rgb(76, 51, 152);
+.nav-item-1 {
+  background-color: rgb(76, 51, 152);
   border: none;
   color: #d9d9dc;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
-.nav-item-2{
+.nav-item-2 {
   margin: 0px 2rem;
   text-decoration: none;
   color: #d9d9dc;
@@ -164,25 +164,59 @@ margin-top: -2.5rem;
   align-items: center;
   justify-content: center;
 }
-.nav-item-3{
+.nav-item-3 {
   color: #d9d9dc;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
-.MdLanguage{
+.MdLanguage {
   margin-right: 5px;
   font-size: 20px;
+}
+.BiSolidGift {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.CgProfile {
+  margin-right: 5px;
+  font-size: 20px;
+}
+.dropbtn {
+  background-color: rgb(76, 51, 152);
+  border: none;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
-.BiSolidGift{
-  margin-right: 5px;
-  font-size: 20px;
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 260px;
+  z-index: 1;
+  right: 0; /* hizalamayi sagdan 0 'le yapar*/
+  top: 100%; 
 }
-.CgProfile{
-  margin-right: 5px;
-  font-size: 20px;
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 @media (max-width: 768px) {
