@@ -36,6 +36,9 @@ const Cart = ({ cartItems, setCartItems }) => {
     if (type) {
       setCartItems([]);
       handleDialog("", false);
+      // Son ürün kaldırıldı, ana sayfaya yönlendir
+      window.location.href = "/";
+
     } else {
       handleDialog("", false);
     }
@@ -85,7 +88,7 @@ const Cart = ({ cartItems, setCartItems }) => {
                 </div>
                 <div className="cart-price">
                   ₺ {totalPrice.toFixed(2)}
-                  
+
                 </div>
               </div>
 
@@ -97,11 +100,12 @@ const Cart = ({ cartItems, setCartItems }) => {
           </div>
         </div>
         <Footer />
-        
+
 
       </div >
 
       {dialog.isLoading && <Dialog onDialog={areUSureDelete} message={dialog.message} />}
+
 
     </div >
 

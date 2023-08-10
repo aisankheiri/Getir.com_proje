@@ -82,6 +82,7 @@ function Dialog({ message ,onDialog }) {
           </button>
         </div>
       </div>
+   
     </div>
   );
 }

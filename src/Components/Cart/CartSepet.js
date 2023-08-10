@@ -48,7 +48,7 @@ const CartSepet = ({ cartItems, setCartItems }) => {
       alertify.success(`${product.name} 1 azaldı.`, 4);
       setLoadingProductIds(loadingProductIds.filter((id) => id !== product.id));
 
-      if (cartItems.length === 1) {
+      if (cartItems.length === 1 ) {
         // Son ürün kaldırıldı, ana sayfaya yönlendir
         window.location.href = "/";
       }
