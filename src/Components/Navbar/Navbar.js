@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-
-
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -23,13 +21,38 @@ import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import LogoutTwoToneIcon from "@mui/icons-material/LogoutTwoTone";
 import ClearTwoToneIcon from "@mui/icons-material/ClearTwoTone";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
-
 import { useMediaQuery } from "@mui/material";
+import getir from "../../Assets/logoPics/getir.svg";
+import getirYemek from "../../Assets/logoPics/getiryemek.svg";
+import getirBuyuk from "../../Assets/logoPics/getirbuyuk.svg";
+import getirSu from "../../Assets/logoPics/getirsu.svg";
+import getirCarsi from "../../Assets/logoPics/getircarsi.svg";
+import { MdLanguage } from "react-icons/md";
+
+import { BiSolidGift } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg";
+
+
+
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const isSmallScreen = useMediaQuery("(max-width:768px)");
   const [selectedButton, setSelectedButton] = useState("");
+
+  const handleImageClick = (buttonId) => {
+    setSelectedButton(buttonId);
+  };
+
+
+  const images = document.querySelectorAll('.logo');
+
+  images.forEach(image => {
+    image.addEventListener('click', function () {
+      images.forEach(img => img.classList.remove('selected'));
+      this.classList.add('selected');
+    });
+  });
 
   const menuOptions = [
     {
@@ -83,50 +106,73 @@ const Navbar = () => {
   ];
 
   return (
-    <nav>
-      <div className="navbar-links-container">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <button
-            className="nav-link nav-link-getir-text"
-            onClick={() => setSelectedButton("getir")}
-          >
-            {" "}
-            getir
-          </button>
-        </Link>
-        <Link to="/yemek" style={{ textDecoration: "none" }}>
-          <button
-            className="nav-link"
-            onClick={() => setSelectedButton("getirYemek")}
-          >
-            getiryemek
-          </button>
-        </Link>
-        <Link to="/buyuk" style={{ textDecoration: "none" }}>
-          <button
-            className="nav-link"
-            onClick={() => setSelectedButton("getirbüyük")}
-          >
-            getirbüyük
-          </button>
-        </Link>
-        <Link to="/su" style={{ textDecoration: "none" }}>
-          <button
-            className="nav-link"
-            onClick={() => setSelectedButton("getirsu")}
-          >
-            getirsu
-          </button>
-        </Link>
-        <Link to="/carsi" style={{ textDecoration: "none" }}>
-          <button
-            className="nav-link"
-            onClick={() => setSelectedButton("getirçarşı")}
-          >
-            getirçarşı
-          </button>
-        </Link>
-      </div>
+    <div>
+      <nav className="navbar">
+        <div className="navbar-links-container">
+          <div className="navbar-items">
+
+            <div
+              className={`logo ${selectedButton === "getir" ? "selected" : ""}`}
+              onClick={() => handleImageClick("getir")}
+            >
+              <div className="link">
+                <Link to="/">
+                  <img className="img-size" src={getir} alt="getir-svg" />
+                </Link>
+              </div>
+            </div>
+            <div
+              className={`logo ${selectedButton === "getiryemek" ? "selected" : ""}`}
+              onClick={() => handleImageClick("getiryemek")}
+            >
+              <div className="link">
+                <Link to="/yemek">
+                  <img className="img-size" src={getirYemek} alt="getiryemek-svg" />
+                </Link>
+              </div>
+            </div>
+            <div
+              className={`logo ${selectedButton === "getirbuyuk" ? "selected" : ""}`}
+              onClick={() => handleImageClick("getirbuyuk")}
+            >
+              <div className="link">
+                <Link to="/buyuk">
+                  <img className="img-size" src={getirBuyuk} alt="getirbuyuk-svg" />
+                </Link>
+              </div>
+            </div>
+            <div
+              className={`logo ${selectedButton === "getirsu" ? "selected" : ""}`}
+              onClick={() => handleImageClick("getirsu")}
+            >
+              <div className="link">
+                <Link to="/su">
+                  <img className="img-size" src={getirSu} alt="getirsu-svg" />
+                </Link>
+              </div>
+            </div>
+            <div
+              className={`logo ${selectedButton === "getircarsi" ? "selected" : ""}`}
+              onClick={() => handleImageClick("getircarsi")}
+            >
+              <div className="link">
+                <Link to="/carsi">
+                  <img className="img-size" src={getirCarsi} alt="getircarsi-svg" />
+                </Link>
+              </div>
+
+
+            </div>
+            <div className="nav-items-right">
+              <button href="" className="nav-item-1" target="_blank" rel="noreferrer noopener"><MdLanguage className="MdLanguage" />Türkçe (TR)</button>
+              <a href="/kampanyalar" className="nav-item-2"><BiSolidGift className="BiSolidGift"/>Kampanyalar</a>
+              <div className="nav-item-3"><CgProfile className="CgProfile"/>Profil</div>
+            </div>
+
+          </div>
+
+        </div>
+      </nav>
 
       <div className="nav-second">
         {isSmallScreen && (
@@ -137,7 +183,7 @@ const Navbar = () => {
             />
           </div>
         )}
-        <div className="nav-second-text">{selectedButton}</div>
+        <div className="nav-second-text"></div>
 
         <SearchTwoToneIcon className="search-icon" />
 
@@ -179,8 +225,9 @@ const Navbar = () => {
           </Box>
         </Drawer>
       </div>
-    </nav>
-    
+
+    </div>
+
   );
 };
 

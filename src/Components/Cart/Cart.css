@@ -149,12 +149,13 @@ h5 {
 }
 .navbar-adress-back{
   background-color: #FFD300;
+  border-radius: 20px 0px 0px 20px;
 }
 .navbar-adress-text{
   height: 40px;
   width: 7rem;
   background-color: #f6f6f6;
-  border-radius: 8px 50px 50px 8px;
+  border-radius: 20px 50px 50px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,7 +167,7 @@ h5 {
   height: 40px;
   width: 6rem;
   background-color: #FFD300;
-  border-radius: 0px 8px 8px 0px;
+  border-radius: 0px 10px 10px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
