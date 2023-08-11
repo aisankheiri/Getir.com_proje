@@ -183,9 +183,11 @@ navbar-items {
   margin-right: 5px;
   font-size: 20px;
 }
-.CgProfile {
+.faUser {
   margin-right: 5px;
-  font-size: 20px;
+  font-size: 17px;
+  
+ 
 }
 .dropbtn {
   background-color:#4C3398;

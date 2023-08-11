@@ -30,9 +30,10 @@ import getirCarsi from "../../Assets/logoPics/getircarsi.svg";
 import { MdLanguage } from "react-icons/md";
 
 import { BiSolidGift } from "react-icons/bi";
-import { CgProfile } from "react-icons/cg";
 import avatar from "../../Assets/logoPics/avatar.jpg"
-
+import {BiSolidChevronDown} from "react-icons/bi"
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 const Navbar = () => {
@@ -168,7 +169,7 @@ const Navbar = () => {
               <a href="/kampanyalar" className="nav-item-2"><BiSolidGift className="BiSolidGift" />Kampanyalar</a>
 
               <div class="dropdown">
-                <button className="nav-item-3 dropbtn"><CgProfile className="CgProfile" />Profil</button>
+                <button className="nav-item-3 dropbtn">  <FontAwesomeIcon icon={faUser} style={{color: "#cbd0d7",}} className="faUser"/>Profil<BiSolidChevronDown/></button>
                 <div class="dropdown-content">
                   <a className="account-back" href="/hesap">
                     <div className="dropdown-account">
@@ -196,6 +197,7 @@ const Navbar = () => {
 
         </div>
       </nav>
+    
 
       <div className="nav-second">
         {isSmallScreen && (

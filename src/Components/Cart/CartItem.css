@@ -21,8 +21,9 @@
   height: 30px;
   width: 165px;
   text-align: left;
-  color: #9b9b9b;
-  font-size: 15px;
+  color:#3a3a3a;
+  font-size: 14px;
+  font-weight: 400;
 }
 .cart-items-function {
   display: flex;
@@ -104,6 +105,8 @@
   justify-content: none;
   color: #5d3ebc;
   font-size: 13px;
+  font-weight: 400;
+  margin-top: 5px;
 }
 
 /* loading icon when click add or remove buttons */
