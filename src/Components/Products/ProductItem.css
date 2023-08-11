@@ -16,16 +16,17 @@
 }
 .product-price {
   color: #5d3ebc;
-  font-style: bold;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
 }
 .product-name {
   display: flex;
   justify-content: center;
-  font-size: small;
+  font-size: 14px;
   margin-top: 0.5rem;
   height: 2rem;
+  font-weight: 400;
+  color: #252525;
 }
 .product-boxes-img-container{
   position: relative;

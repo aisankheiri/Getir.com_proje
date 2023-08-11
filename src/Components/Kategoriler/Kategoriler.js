@@ -137,7 +137,7 @@ const Kategoriler = ({ cartItems, setCartItems }) => {
 
         {cartItems.length === 0 && (
           <div className='cart'>
-            <img src={sepetimg} className="cart-img"></img>
+            <img src={sepetimg} alt='sepetimg' className="cart-img"></img>
             <h4>Sepetiniz şu an boş</h4>
             <p>Sipariş vermek için sepetinize ürün ekleyin</p>
           </div>

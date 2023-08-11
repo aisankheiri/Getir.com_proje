@@ -60,6 +60,7 @@
 .cart-text-getirsayfa {
   margin-top: 1rem;
   color: #343335;
+  font-weight: 400;
 }
 .cart {
   margin-top: 0.7rem;
@@ -92,13 +93,12 @@
 .cart h4{
   color:#5D3EBC;
   margin-bottom: 1rem;
-  font-weight: 1000;
-  font-style: bold;
+  font-weight: 500;
 }
 .cart p{
   color: #727C8F;
   font-size: medium;
-  font-weight: 600;
+  font-weight: 300;
   
 }
 .cart-img{
@@ -107,4 +107,5 @@
 .cart-below{
   margin-top: 2rem;
   font-size: 15px;
+  font-weight: 400;
 }
