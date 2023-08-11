@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import alertify from "alertifyjs";
+// import alertify from "alertifyjs";
 import "./CartItem.css";
 import { Link } from 'react-router-dom';
 import { BiTrash } from "react-icons/bi";
@@ -27,7 +27,7 @@ const CartItem = ({ cartItems, setCartItems }) => {
       } else {
         setCartItems([...cartItems, { ...product, quantity: 1 }]);
       }
-      alertify.success(`${product.name} 1 arttırıldı.`, 4);
+      // alertify.success(`${product.name} 1 arttırıldı.`, 4);
       setLoadingProductIds(loadingProductIds.filter(id => id !== product.id));
     }, 1000);
   };
@@ -48,7 +48,7 @@ const CartItem = ({ cartItems, setCartItems }) => {
           )
         );
       }
-      alertify.success(`${product.name} 1 azaldı.`, 4);
+      // alertify.success(`${product.name} 1 azaldı.`, 4);
       setLoadingProductIds(loadingProductIds.filter(id => id !== product.id));
   }, 1000);
 };

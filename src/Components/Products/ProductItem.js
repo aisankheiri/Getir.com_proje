@@ -1,6 +1,6 @@
 import React from 'react'
 import "./ProductItem.css";
-import alertify from "alertifyjs";
+// import alertify from "alertifyjs";
 
 const ProductItem = ({productItems,cartItems,setCartItems}) => {
 
@@ -19,7 +19,7 @@ const ProductItem = ({productItems,cartItems,setCartItems}) => {
     } else {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
-    alertify.success(`${product.name} sepete eklendi.`, 4);
+    // alertify.success(`${product.name} sepete eklendi.`, 4);
     //saniye belirlemek ,4
   };
 
