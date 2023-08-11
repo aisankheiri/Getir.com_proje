@@ -31,7 +31,7 @@ import { MdLanguage } from "react-icons/md";
 
 import { BiSolidGift } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
-
+import avatar from "../../Assets/logoPics/avatar.jpg"
 
 
 
@@ -170,9 +170,24 @@ const Navbar = () => {
               <div class="dropdown">
                 <button className="nav-item-3 dropbtn"><CgProfile className="CgProfile" />Profil</button>
                 <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
+                  <a className="account-back" href="/hesap">
+                    <div className="dropdown-account">
+                      <div className="dropdown-avatar">
+                        <div className="dropdown-avatar-img"><img src={avatar} alt="avatar-png" /></div>
+                      </div>
+                      <div className="dropdown-account-name-phone-container">
+                        <span className="account-name">Aisan Kheiri</span>
+                        <span className="account-number">+905528618606</span>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="/hesap/adreslerim">Adreslerim</a>
+                  <a href="/hesap/favori-urunlerim">Favori Ürünlerim</a>
+                  <a href="/hesap/gecmis-siparislerim">Geçmiş Siparişlerim</a>
+                  <a href="/hesap/odeme-yontemlerim">Ödeme Yöntemlerim</a>
+                  <a href="/hesap/fatura">Fatura Bilgileri</a>
+                  <a href="/hesap/iletisim-tercihlerim">İletişim Tercihlerim</a>
+                  <a href="/logout" className="dropdown-logout">Çıkış yap</a>
                 </div>
               </div>
             </div>
