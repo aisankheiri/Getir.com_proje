@@ -31,7 +31,7 @@ import { MdLanguage } from "react-icons/md";
 
 import { BiSolidGift } from "react-icons/bi";
 import avatar from "../../Assets/logoPics/avatar.jpg"
-import {BiSolidChevronDown} from "react-icons/bi"
+import { BiSolidChevronDown } from "react-icons/bi"
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -169,7 +169,7 @@ const Navbar = () => {
               <a href="/kampanyalar" className="nav-item-2"><BiSolidGift className="BiSolidGift" />Kampanyalar</a>
 
               <div class="dropdown">
-                <button className="nav-item-3 dropbtn">  <FontAwesomeIcon icon={faUser} style={{color: "#cbd0d7",}} className="faUser"/>Profil<BiSolidChevronDown/></button>
+                <button className="nav-item-3 dropbtn">  <FontAwesomeIcon icon={faUser} style={{ color: "#cbd0d7", }} className="faUser" />Profil<BiSolidChevronDown /></button>
                 <div class="dropdown-content">
                   <a className="account-back" href="/hesap">
                     <div className="dropdown-account">
@@ -197,7 +197,7 @@ const Navbar = () => {
 
         </div>
       </nav>
-    
+
 
       <div className="nav-second">
         {isSmallScreen && (
@@ -208,7 +208,33 @@ const Navbar = () => {
             />
           </div>
         )}
-        <div className="nav-second-text"></div>
+        <div className="nav-second-images-of-kategoris">
+          {selectedButton === "getir" && (
+            <div>
+              <img className="images" src={getir} alt="images" />
+            </div>
+          )}
+           {selectedButton === "getiryemek" && (
+            <div>
+              <img className="images" src={getirYemek} alt="images" />
+            </div>
+          )}
+          {selectedButton === "getirbuyuk" && (
+            <div>
+              <img className="images" src={getirBuyuk} alt="images" />
+            </div>
+          )}
+           {selectedButton === "getirsu" && (
+            <div>
+              <img className="images" src={getirSu} alt="images" />
+            </div>
+          )}
+          {selectedButton === "getircarsi" && (
+            <div>
+              <img className="images" src={getirCarsi} alt="images" />
+            </div>
+          )}
+        </div>
 
         <SearchTwoToneIcon className="search-icon" />
 

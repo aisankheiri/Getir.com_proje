@@ -286,6 +286,10 @@ navbar-items {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.images{
+  height: 24px;
+  width: auto;
+}
 
 
 @media (max-width: 768px) {
