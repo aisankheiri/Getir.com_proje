@@ -40,9 +40,22 @@ footer {
   list-style-type: none;
   font-weight: 350;
   font-size: 19px;
-  line-height: 26px;
+  line-height: 36px;
 }
 li {
   display: list-item;
   text-align: -webkit-match-parent;
+}
+.karekod {
+  display: flex;
+  justify-content: end;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  border: #f1f1f1 solid 1px;
+  border-radius: 5px;
+}
+.karekod-img {
+  height: 84px;
+  width: 72px;
 }

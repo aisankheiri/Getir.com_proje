@@ -17,13 +17,13 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-             . Bilgi Toplumu Hizmetleri
+            . Bilgi Toplumu Hizmetleri
           </a>
           <div className="footer-icons">
-            <a href="https://www.facebook.com/getir" className="icon" target="_blank" rel="noreferrer noopener"><BsFacebook className="icon-face"/></a>
-            <a href="https://www.twitter.com/getir" className="icon" target="_blank" rel="noreferrer noopener"><BsTwitter  className="icon-twit" /></a>
-            <a href="https://www.instagram.com/getir" className="icon" target="_blank" rel="noreferrer noopener"><BsInstagram className="icon-insta"/></a>
-            <button href="" className="change-language-btn" target="_blank" rel="noreferrer noopener"><MdLanguage className="icon-language"/>Türkçe (TR)</button>
+            <a href="https://www.facebook.com/getir" className="icon" target="_blank" rel="noreferrer noopener"><BsFacebook className="icon-face" /></a>
+            <a href="https://www.twitter.com/getir" className="icon" target="_blank" rel="noreferrer noopener"><BsTwitter className="icon-twit" /></a>
+            <a href="https://www.instagram.com/getir" className="icon" target="_blank" rel="noreferrer noopener"><BsInstagram className="icon-insta" /></a>
+            <button href="" className="change-language-btn" target="_blank" rel="noreferrer noopener"><MdLanguage className="icon-language" />Türkçe (TR)</button>
           </div>
         </div>
       </article>
