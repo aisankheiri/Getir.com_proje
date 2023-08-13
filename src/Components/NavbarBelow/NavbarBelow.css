@@ -7,8 +7,7 @@ footer {
 .navbar-container {
   display: flex;
   width: 100%;
-  padding-bottom: 20px;
-  /* background-color: rgb(103, 29, 29); */
+  margin-bottom: -4rem;
 }
 .navbar-items-container {
   padding-top: 40px;
@@ -58,4 +57,8 @@ li {
 .karekod-img {
   height: 84px;
   width: 72px;
+}
+a{
+  text-decoration: none;
+  color: rgb(68, 69, 70);
 }
