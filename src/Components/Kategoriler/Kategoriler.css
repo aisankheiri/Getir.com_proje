@@ -1,10 +1,18 @@
 .category {
   margin: 1rem;
+  
+}
+.category-items{
+  padding: 3px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+
+  
 }
 .category-text {
   font-family: "Comic Neue", cursive;
   font-family: "Open Sans", sans-serif;
-  color: #343335;
+  color: #282728;
   font-size: 14px;
   font-style: bold;
   font-weight: 600;
@@ -15,10 +23,12 @@
 }
 .category-btn {
   display: flex;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   border: none;
-  margin-bottom: 5px;
   width: 100%;
+  padding: 4px;
+  
+  
 }
 .category-btn:hover {
   background-color: #f3f0fe;
@@ -110,47 +120,24 @@
   font-weight: 400;
 }
 
-
-
-
-
-/* Dropdown button on hover & focus */
-.category-dropbtn:hover, .category-dropbtn:focus {
-  background-color: #3e8e41;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.category-dropdown {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.category-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #489b3e;
-  min-width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-/* Links inside the dropdown */
-.category-dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.category-dropdown-content a:hover {background-color: #884646}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
 .category-de-acilir-menu{
   padding-left: 2.7rem;
   padding-bottom: 1rem;
   color: #575a57;
   
+}
+.down-icon{
+color: #606360;
+}
+
+.textler{
+  width: 70%;
+  display: flex;
+  justify-content: start;
+  font-family: "Comic Neue", cursive;
+  font-family: "Open Sans", sans-serif;
+  color: #282728;
+  font-size: 14px;
+  font-style: bold;
+  font-weight: 600;
 }
