@@ -66,7 +66,7 @@ const Kategoriler = ({ cartItems, setCartItems }) => {
 
             <div>
               <div>
-                <button className='category-btn category-text' onClick={toggleDropdown1}><img src={img1} />Yaza Özel</button>
+                <button className='category-btn category-text' onClick={toggleDropdown1}><img src={img1} alt='img1'/>Yaza Özel</button>
                 {isOpen1 && (
                   <div>
                     <div><a href="#1" className='category-btn category-text category-de-acilir-menu'>Dondurma</a></div>
@@ -78,17 +78,27 @@ const Kategoriler = ({ cartItems, setCartItems }) => {
                     <div><a href="#7" className='category-btn category-text category-de-acilir-menu'>Bebek</a></div>
                     <div><a href="#8" className='category-btn category-text category-de-acilir-menu'>Ev Bakım</a></div>
                     <div><a href="#9" className='category-btn category-text category-de-acilir-menu'>Cinsel Sağlık</a></div>
-                    
                   </div>
                 )}
               </div>
               <div>
-                <button className='category-btn category-text' onClick={toggleDropdown2}><img src={img2} />İndirimler</button>
+                <button className='category-btn category-text' onClick={toggleDropdown2}><img src={img2} alt='img2'/>İndirimler</button>
                 {isOpen2 && (
                   <div>
-                    <div><a href="#" className='category-btn category-text category-de-acilir-menu'>Element 1</a></div>
-                    <div><a href="#" className='category-btn category-text category-de-acilir-menu'>Element 2</a></div>
-                    <div><a href="#" className='category-btn category-text category-de-acilir-menu'>Element 3</a></div>
+                    <div><a href="#1" className='category-btn category-text category-de-acilir-menu'>Su & içecek</a></div>
+                    <div><a href="#2" className='category-btn category-text category-de-acilir-menu'>Fırından</a></div>
+                    <div><a href="#3" className='category-btn category-text category-de-acilir-menu'>Temel Gıda</a></div>
+                    <div><a href="#4" className='category-btn category-text category-de-acilir-menu'>Atıştırmalık</a></div>
+                    <div><a href="#5" className='category-btn category-text category-de-acilir-menu'>Dondurma</a></div>
+                    <div><a href="#6" className='category-btn category-text category-de-acilir-menu'>Süt Ürünleri</a></div>
+                    <div><a href="#7" className='category-btn category-text category-de-acilir-menu'>Kahvaltılık</a></div>
+                    <div><a href="#8" className='category-btn category-text category-de-acilir-menu'>Yiyecek</a></div>
+                    <div><a href="#9" className='category-btn category-text category-de-acilir-menu'>Fit & Form</a></div>
+                    <div><a href="#10" className='category-btn category-text category-de-acilir-menu'>Kişisel Bakım</a></div>
+                    <div><a href="#11" className='category-btn category-text category-de-acilir-menu'>Ev Bakım</a></div>
+                    <div><a href="#12" className='category-btn category-text category-de-acilir-menu'>Ev & Yaşam</a></div>
+                    <div><a href="#13" className='category-btn category-text category-de-acilir-menu'>Bebek</a></div>
+                    <div><a href="#14" className='category-btn category-text category-de-acilir-menu'>Cinsel Sağlık</a></div>
                   </div>
                 )}
               </div>
