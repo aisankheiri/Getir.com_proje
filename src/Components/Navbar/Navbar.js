@@ -46,14 +46,6 @@ const Navbar = () => {
   };
 
 
-  const images = document.querySelectorAll('.logo');
-
-  images.forEach(image => {
-    image.addEventListener('click', function () {
-      images.forEach(img => img.classList.remove('selected'));
-      this.classList.add('selected');
-    });
-  });
 
   const menuOptions = [
     {
