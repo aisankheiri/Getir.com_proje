@@ -8,10 +8,12 @@ import GetirCarsi from './Routes/GetirCarsi/GetirCarsi';
 import GetirBuyuk from './Routes/GetirBuyuk/GetirBuyuk';
 import { useEffect, useState } from 'react';
 import Cart from "./Components/Cart/Cart";
-
+import getirdata from "./Back/Getir/getirdata";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const { productItems } = getirdata;
+  const { categories } = getirdata;
 
   useEffect(()=>{
     const cartItems = localStorage.getItem("cartItems")
@@ -26,7 +28,7 @@ function App() {
     <div className='App'>
       <Router>
         <Routes>
-          <Route path="/" element={<Getir cartItems={cartItems} setCartItems={setCartItems} />} />
+          <Route path="/" element={<Getir categories={categories} productItems={productItems} cartItems={cartItems} setCartItems={setCartItems} />} />
           <Route path="/yemek" element={<GetirYemek  />} />
           <Route path="/buyuk" element={<GetirBuyuk />} />
           <Route path="/su" element={<GetirSu />} />

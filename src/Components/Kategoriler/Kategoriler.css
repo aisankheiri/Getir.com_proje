@@ -1,13 +1,10 @@
 .category {
   margin: 1rem;
-  
 }
-.category-items{
+.category-items {
   padding: 3px;
   border-radius: 8px;
   background-color: #f3f3f3;
-
-  
 }
 .category-text {
   font-family: "Comic Neue", cursive;
@@ -27,8 +24,6 @@
   border: none;
   width: 100%;
   padding: 4px;
-  
-  
 }
 .category-btn:hover {
   background-color: #f3f0fe;
@@ -92,45 +87,43 @@
   flex-wrap: wrap;
   padding-left: 12px;
 }
-.cart{
+.cart {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-
 }
-.cart h4{
-  color:#5D3EBC;
+.cart h4 {
+  color: #5d3ebc;
   margin-bottom: 1rem;
   font-weight: 500;
 }
-.cart p{
-  color: #727C8F;
+.cart p {
+  color: #727c8f;
   font-size: medium;
   font-weight: 300;
-  
 }
-.cart-img{
+.cart-img {
   margin-bottom: 1rem;
 }
-.cart-below{
+.cart-below {
   margin-top: 2rem;
   font-size: 15px;
   font-weight: 400;
 }
 
-.category-de-acilir-menu{
+.category-de-acilir-menu {
   padding-left: 2.7rem;
   padding-bottom: 1rem;
   color: #575a57;
-  
 }
-.down-icon{
-color: #606360;
+.down-icon {
+  color: #606360;
+  margin-top: 5px;
 }
 
-.textler{
+.textler {
   width: 70%;
   display: flex;
   justify-content: start;
@@ -140,4 +133,7 @@ color: #606360;
   font-size: 14px;
   font-style: bold;
   font-weight: 600;
+}
+.flex-option{
+  display: flex;
 }
